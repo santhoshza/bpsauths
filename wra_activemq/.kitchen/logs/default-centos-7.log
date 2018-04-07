@@ -1,0 +1,175 @@
+I, [2018-04-06T23:02:40.734803 #9104]  INFO -- default-centos-7: -----> Converging <default-centos-7>...
+I, [2018-04-06T23:02:40.742343 #9104]  INFO -- default-centos-7: Preparing files for transfer
+I, [2018-04-06T23:02:40.743670 #9104]  INFO -- default-centos-7: Preparing dna.json
+I, [2018-04-06T23:02:40.745355 #9104]  INFO -- default-centos-7: Resolving cookbook dependencies with Berkshelf 6.3.1...
+I, [2018-04-06T23:02:49.468585 #9104]  INFO -- default-centos-7: Removing non-cookbook files before transfer
+I, [2018-04-06T23:02:49.592023 #9104]  INFO -- default-centos-7: Preparing validation.pem
+I, [2018-04-06T23:02:49.593018 #9104]  INFO -- default-centos-7: Preparing client.rb
+I, [2018-04-06T23:02:49.903998 #9104]  INFO -- default-centos-7: -----> Chef Omnibus installation detected (install only if missing)
+I, [2018-04-06T23:02:49.948674 #9104]  INFO -- default-centos-7: Transferring files to <default-centos-7>
+I, [2018-04-06T23:02:54.747832 #9104]  INFO -- default-centos-7: Starting Chef Client, version 14.0.190
+I, [2018-04-06T23:02:56.041920 #9104]  INFO -- default-centos-7: resolving cookbooks for run list: ["wra_activemq::legacy"]
+I, [2018-04-06T23:02:57.260625 #9104]  INFO -- default-centos-7: Synchronizing Cookbooks:
+I, [2018-04-06T23:02:57.271646 #9104]  INFO -- default-centos-7:   - wra_activemq (1.0.0)
+I, [2018-04-06T23:02:57.356193 #9104]  INFO -- default-centos-7:   - java (1.50.0)
+I, [2018-04-06T23:02:57.430262 #9104]  INFO -- default-centos-7:   - homebrew (5.0.4)
+I, [2018-04-06T23:02:57.430262 #9104]  INFO -- default-centos-7:   - apt (6.1.4)
+I, [2018-04-06T23:02:57.430262 #9104]  INFO -- default-centos-7:   - activemq (4.1.0)
+I, [2018-04-06T23:02:57.442255 #9104]  INFO -- default-centos-7:   - windows (4.1.4)
+I, [2018-04-06T23:02:57.442255 #9104]  INFO -- default-centos-7: Installing Cookbook Gems:
+I, [2018-04-06T23:02:57.464829 #9104]  INFO -- default-centos-7: Compiling Cookbooks...
+I, [2018-04-06T23:02:57.551281 #9104]  INFO -- default-centos-7: Converging 18 resources
+I, [2018-04-06T23:02:57.551281 #9104]  INFO -- default-centos-7: Recipe: java::notify
+I, [2018-04-06T23:02:57.551281 #9104]  INFO -- default-centos-7:   * log[jdk-version-changed] action nothing (skipped due to action :nothing)
+I, [2018-04-06T23:02:57.551281 #9104]  INFO -- default-centos-7: Recipe: java::oracle
+I, [2018-04-06T23:02:57.551281 #9104]  INFO -- default-centos-7:   * log[WARNING - Downloading directly from Oracle is unreliable. Change download url.] action write[2018-04-06T22:02:59+00:00] WARN: WARNING - Downloading directly from Oracle is unreliable. Change download url.
+I, [2018-04-06T23:02:57.551281 #9104]  INFO -- default-centos-7: 
+I, [2018-04-06T23:02:57.551281 #9104]  INFO -- default-centos-7:   
+I, [2018-04-06T23:02:57.551281 #9104]  INFO -- default-centos-7: Recipe: java::set_java_home
+I, [2018-04-06T23:02:57.565969 #9104]  INFO -- default-centos-7:   * directory[/etc/profile.d] action create (up to date)
+I, [2018-04-06T23:02:57.565969 #9104]  INFO -- default-centos-7:   * template[/etc/profile.d/jdk.sh] action create
+I, [2018-04-06T23:02:57.565969 #9104]  INFO -- default-centos-7:     - create new file /etc/profile.d/jdk.sh
+I, [2018-04-06T23:02:57.565969 #9104]  INFO -- default-centos-7:     - update content in file /etc/profile.d/jdk.sh from none to 5b75c4
+I, [2018-04-06T23:02:57.565969 #9104]  INFO -- default-centos-7:     --- /etc/profile.d/jdk.sh	2018-04-06 22:02:59.991919223 +0000
+I, [2018-04-06T23:02:57.566906 #9104]  INFO -- default-centos-7:     +++ /etc/profile.d/.chef-jdk20180406-3405-1ugs5jr.sh	2018-04-06 22:02:59.991919223 +0000
+I, [2018-04-06T23:02:57.566906 #9104]  INFO -- default-centos-7:     @@ -1 +1,2 @@
+I, [2018-04-06T23:02:57.566906 #9104]  INFO -- default-centos-7:     +export JAVA_HOME=/usr/lib/jvm/java
+I, [2018-04-06T23:02:57.604120 #9104]  INFO -- default-centos-7:     - change mode from '' to '0755'
+I, [2018-04-06T23:02:57.604120 #9104]  INFO -- default-centos-7:     - restore selinux security context
+I, [2018-04-06T23:02:57.604120 #9104]  INFO -- default-centos-7:   * ruby_block[Set JAVA_HOME in /etc/environment] action run
+I, [2018-04-06T23:02:57.604120 #9104]  INFO -- default-centos-7:     - execute the ruby block Set JAVA_HOME in /etc/environment
+I, [2018-04-06T23:02:57.604120 #9104]  INFO -- default-centos-7: Recipe: java::oracle
+I, [2018-04-06T23:02:58.687526 #9104]  INFO -- default-centos-7:   * yum_package[tar] action install (up to date)
+I, [2018-04-06T23:02:58.687526 #9104]  INFO -- default-centos-7:   * java_ark[jdk] action install
+I, [2018-04-06T23:02:58.687526 #9104]  INFO -- default-centos-7:     - create dir /usr/lib/jvm and change owner to root:root
+I, [2018-04-06T23:02:58.689467 #9104]  INFO -- default-centos-7:     * yum_package[curl for download_direct_from_oracle] action install (up to date)
+I, [2018-04-06T23:06:15.848520 #9104]  INFO -- default-centos-7:     - download oracle tarball straight from the server
+I, [2018-04-06T23:06:15.848520 #9104]  INFO -- default-centos-7:     - extract compressed data into Chef file cache path and
+I, [2018-04-06T23:06:15.848520 #9104]  INFO -- default-centos-7:                  move extracted data to /usr/lib/jvm/jdk1.8.0_131
+I, [2018-04-06T23:06:15.848520 #9104]  INFO -- default-centos-7:     - Symlink /usr/lib/jvm/jdk1.8.0_131 to /usr/lib/jvm/java
+I, [2018-04-06T23:06:15.848520 #9104]  INFO -- default-centos-7:     * yum_package[curl for download_direct_from_oracle] action nothing (skipped due to action :nothing)
+I, [2018-04-06T23:06:15.924845 #9104]  INFO -- default-centos-7:     * java_alternatives[set-java-alternatives] action set
+I, [2018-04-06T23:06:16.010608 #9104]  INFO -- default-centos-7:       - Add alternative for appletviewer
+I, [2018-04-06T23:06:16.086859 #9104]  INFO -- default-centos-7:       - Add alternative for ControlPanel
+I, [2018-04-06T23:06:16.172117 #9104]  INFO -- default-centos-7:       - Add alternative for extcheck
+I, [2018-04-06T23:06:16.256962 #9104]  INFO -- default-centos-7:       - Add alternative for idlj
+I, [2018-04-06T23:06:16.343118 #9104]  INFO -- default-centos-7:       - Add alternative for jar
+I, [2018-04-06T23:06:16.429148 #9104]  INFO -- default-centos-7:       - Add alternative for jarsigner
+I, [2018-04-06T23:06:16.504814 #9104]  INFO -- default-centos-7:       - Add alternative for java
+I, [2018-04-06T23:06:16.589746 #9104]  INFO -- default-centos-7:       - Add alternative for javac
+I, [2018-04-06T23:06:16.675573 #9104]  INFO -- default-centos-7:       - Add alternative for javadoc
+I, [2018-04-06T23:06:16.760367 #9104]  INFO -- default-centos-7:       - Add alternative for javafxpackager
+I, [2018-04-06T23:06:16.846734 #9104]  INFO -- default-centos-7:       - Add alternative for javah
+I, [2018-04-06T23:06:16.931485 #9104]  INFO -- default-centos-7:       - Add alternative for javap
+I, [2018-04-06T23:06:17.018109 #9104]  INFO -- default-centos-7:       - Add alternative for javaws
+I, [2018-04-06T23:06:17.104493 #9104]  INFO -- default-centos-7:       - Add alternative for jcmd
+I, [2018-04-06T23:06:17.190695 #9104]  INFO -- default-centos-7:       - Add alternative for jconsole
+I, [2018-04-06T23:06:17.266642 #9104]  INFO -- default-centos-7:       - Add alternative for jcontrol
+I, [2018-04-06T23:06:17.363456 #9104]  INFO -- default-centos-7:       - Add alternative for jdb
+I, [2018-04-06T23:06:17.449170 #9104]  INFO -- default-centos-7:       - Add alternative for jdeps
+I, [2018-04-06T23:06:17.534377 #9104]  INFO -- default-centos-7:       - Add alternative for jhat
+I, [2018-04-06T23:06:17.608817 #9104]  INFO -- default-centos-7:       - Add alternative for jinfo
+I, [2018-04-06T23:06:17.693745 #9104]  INFO -- default-centos-7:       - Add alternative for jjs
+I, [2018-04-06T23:06:17.780538 #9104]  INFO -- default-centos-7:       - Add alternative for jmap
+I, [2018-04-06T23:06:17.864827 #9104]  INFO -- default-centos-7:       - Add alternative for jmc
+I, [2018-04-06T23:06:17.948919 #9104]  INFO -- default-centos-7:       - Add alternative for jps
+I, [2018-04-06T23:06:18.033373 #9104]  INFO -- default-centos-7:       - Add alternative for jrunscript
+I, [2018-04-06T23:06:18.117870 #9104]  INFO -- default-centos-7:       - Add alternative for jsadebugd
+I, [2018-04-06T23:06:18.203812 #9104]  INFO -- default-centos-7:       - Add alternative for jstack
+I, [2018-04-06T23:06:18.290245 #9104]  INFO -- default-centos-7:       - Add alternative for jstat
+I, [2018-04-06T23:06:18.375716 #9104]  INFO -- default-centos-7:       - Add alternative for jstatd
+I, [2018-04-06T23:06:18.462294 #9104]  INFO -- default-centos-7:       - Add alternative for jvisualvm
+I, [2018-04-06T23:06:18.547051 #9104]  INFO -- default-centos-7:       - Add alternative for keytool
+I, [2018-04-06T23:06:18.631949 #9104]  INFO -- default-centos-7:       - Add alternative for native2ascii
+I, [2018-04-06T23:06:18.717600 #9104]  INFO -- default-centos-7:       - Add alternative for orbd
+I, [2018-04-06T23:06:18.793614 #9104]  INFO -- default-centos-7:       - Add alternative for pack200
+I, [2018-04-06T23:06:18.878148 #9104]  INFO -- default-centos-7:       - Add alternative for policytool
+I, [2018-04-06T23:06:18.963859 #9104]  INFO -- default-centos-7:       - Add alternative for rmic
+I, [2018-04-06T23:06:19.047740 #9104]  INFO -- default-centos-7:       - Add alternative for rmid
+I, [2018-04-06T23:06:19.132841 #9104]  INFO -- default-centos-7:       - Add alternative for rmiregistry
+I, [2018-04-06T23:06:19.217932 #9104]  INFO -- default-centos-7:       - Add alternative for schemagen
+I, [2018-04-06T23:06:19.304127 #9104]  INFO -- default-centos-7:       - Add alternative for serialver
+I, [2018-04-06T23:06:19.388709 #9104]  INFO -- default-centos-7:       - Add alternative for servertool
+I, [2018-04-06T23:06:19.473406 #9104]  INFO -- default-centos-7:       - Add alternative for tnameserv
+I, [2018-04-06T23:06:19.559450 #9104]  INFO -- default-centos-7:       - Add alternative for unpack200
+I, [2018-04-06T23:06:19.644727 #9104]  INFO -- default-centos-7:       - Add alternative for wsgen
+I, [2018-04-06T23:06:19.729995 #9104]  INFO -- default-centos-7:       - Add alternative for wsimport
+I, [2018-04-06T23:06:19.752261 #9104]  INFO -- default-centos-7:       - Add alternative for xjc
+I, [2018-04-06T23:06:19.752261 #9104]  INFO -- default-centos-7:   
+I, [2018-04-06T23:06:19.752261 #9104]  INFO -- default-centos-7: Recipe: java::notify
+I, [2018-04-06T23:06:19.752261 #9104]  INFO -- default-centos-7:   * log[jdk-version-changed] action write
+I, [2018-04-06T23:06:19.752261 #9104]  INFO -- default-centos-7:   
+I, [2018-04-06T23:06:19.753238 #9104]  INFO -- default-centos-7: Recipe: activemq::default
+I, [2018-04-06T23:06:19.753238 #9104]  INFO -- default-centos-7:   * directory[/opt] action create (up to date)
+I, [2018-04-06T23:07:36.001688 #9104]  INFO -- default-centos-7:   * remote_file[/tmp/kitchen/cache/apache-activemq-5.14.4-bin.tar.gz] action create
+I, [2018-04-06T23:07:36.451056 #9104]  INFO -- default-centos-7:     - create new file /tmp/kitchen/cache/apache-activemq-5.14.4-bin.tar.gz
+I, [2018-04-06T23:07:36.451056 #9104]  INFO -- default-centos-7:     - update content in file /tmp/kitchen/cache/apache-activemq-5.14.4-bin.tar.gz from none to 16ec52
+I, [2018-04-06T23:07:36.451056 #9104]  INFO -- default-centos-7:     (file sizes exceed 10000000 bytes, diff output suppressed)
+I, [2018-04-06T23:07:36.485012 #9104]  INFO -- default-centos-7:     - change mode from '' to '0644'
+I, [2018-04-06T23:07:36.485498 #9104]  INFO -- default-centos-7:     - restore selinux security context
+I, [2018-04-06T23:07:36.486500 #9104]  INFO -- default-centos-7:   * yum_package[tar for artifact decompression] action install (up to date)
+I, [2018-04-06T23:07:37.158964 #9104]  INFO -- default-centos-7:   * execute[tar zxf /tmp/kitchen/cache/apache-activemq-5.14.4-bin.tar.gz] action run
+I, [2018-04-06T23:07:37.158964 #9104]  INFO -- default-centos-7:     - execute tar zxf /tmp/kitchen/cache/apache-activemq-5.14.4-bin.tar.gz
+I, [2018-04-06T23:07:37.158964 #9104]  INFO -- default-centos-7:   * file[/opt/apache-activemq-5.14.4/bin/activemq] action create (up to date)
+I, [2018-04-06T23:07:37.310972 #9104]  INFO -- default-centos-7:   * link[/etc/init.d/activemq] action create
+I, [2018-04-06T23:07:37.310972 #9104]  INFO -- default-centos-7:     - create symlink at /etc/init.d/activemq to /opt/apache-activemq-5.14.4/bin/linux-x86-64/activemq
+I, [2018-04-06T23:07:37.310972 #9104]  INFO -- default-centos-7:   * template[/opt/apache-activemq-5.14.4/conf/activemq.xml] action create
+I, [2018-04-06T23:07:37.310972 #9104]  INFO -- default-centos-7:     - update content in file /opt/apache-activemq-5.14.4/conf/activemq.xml from ca8528 to 62f3c5
+I, [2018-04-06T23:07:37.311951 #9104]  INFO -- default-centos-7:     --- /opt/apache-activemq-5.14.4/conf/activemq.xml	2017-02-27 13:53:15.000000000 +0000
+I, [2018-04-06T23:07:37.311951 #9104]  INFO -- default-centos-7:     +++ /opt/apache-activemq-5.14.4/conf/.chef-activemq20180406-3405-j6ihjn.xml	2018-04-06 22:07:39.734185568 +0000
+I, [2018-04-06T23:07:37.311951 #9104]  INFO -- default-centos-7:     @@ -115,6 +115,7 @@
+I, [2018-04-06T23:07:37.311951 #9104]  INFO -- default-centos-7:           <transportConnector name="stomp" uri="stomp://0.0.0.0:61613?maximumConnections=1000&amp;wireFormat.maxFrameSize=104857600"/>
+I, [2018-04-06T23:07:37.311951 #9104]  INFO -- default-centos-7:           <transportConnector name="mqtt" uri="mqtt://0.0.0.0:1883?maximumConnections=1000&amp;wireFormat.maxFrameSize=104857600"/>
+I, [2018-04-06T23:07:37.311951 #9104]  INFO -- default-centos-7:           <transportConnector name="ws" uri="ws://0.0.0.0:61614?maximumConnections=1000&amp;wireFormat.maxFrameSize=104857600"/>
+I, [2018-04-06T23:07:37.311951 #9104]  INFO -- default-centos-7:     +            <transportConnector name="ssl" uri="ssl://0.0.0.0:61617?needClientAuth=true&amp;maximumConnections=1000&amp;wireformat.maxFrameSize=104857600" />
+I, [2018-04-06T23:07:37.311951 #9104]  INFO -- default-centos-7:       </transportConnectors>
+I, [2018-04-06T23:07:37.311951 #9104]  INFO -- default-centos-7:      
+I, [2018-04-06T23:07:37.311951 #9104]  INFO -- default-centos-7:       <!-- destroy the spring context on shutdown to stop jetty -->
+I, [2018-04-06T23:07:37.352724 #9104]  INFO -- default-centos-7:     - change mode from '0644' to '0755'
+I, [2018-04-06T23:07:37.352724 #9104]  INFO -- default-centos-7:     - restore selinux security context
+I, [2018-04-06T23:07:37.718048 #9104]  INFO -- default-centos-7:   * service[activemq] action enable
+I, [2018-04-06T23:07:37.718048 #9104]  INFO -- default-centos-7:     - enable service service[activemq]
+I, [2018-04-06T23:07:38.398599 #9104]  INFO -- default-centos-7:   * service[activemq] action start
+I, [2018-04-06T23:07:38.398599 #9104]  INFO -- default-centos-7:     - start service service[activemq]
+I, [2018-04-06T23:07:38.399099 #9104]  INFO -- default-centos-7:   * link[/opt/apache-activemq-5.14.4/bin/linux] action create
+I, [2018-04-06T23:07:38.399099 #9104]  INFO -- default-centos-7:     - create symlink at /opt/apache-activemq-5.14.4/bin/linux to /opt/apache-activemq-5.14.4/bin/linux-x86-64
+I, [2018-04-06T23:07:38.508597 #9104]  INFO -- default-centos-7:   * link[/var/run/activemq.pid] action create
+I, [2018-04-06T23:07:38.508597 #9104]  INFO -- default-centos-7:     - create symlink at /var/run/activemq.pid to /opt/apache-activemq-5.14.4/bin/linux/ActiveMQ.pid
+I, [2018-04-06T23:07:38.508597 #9104]  INFO -- default-centos-7:   * template[/opt/apache-activemq-5.14.4/bin/linux/wrapper.conf] action create
+I, [2018-04-06T23:07:38.508597 #9104]  INFO -- default-centos-7:     - update content in file /opt/apache-activemq-5.14.4/bin/linux/wrapper.conf from fe4388 to 257e98
+I, [2018-04-06T23:07:38.508597 #9104]  INFO -- default-centos-7:     --- /opt/apache-activemq-5.14.4/bin/linux/wrapper.conf	2017-02-27 13:53:16.000000000 +0000
+I, [2018-04-06T23:07:38.508597 #9104]  INFO -- default-centos-7:     +++ /opt/apache-activemq-5.14.4/bin/linux/.chef-wrapper20180406-3405-1g4cd36.conf	2018-04-06 22:07:40.932182426 +0000
+I, [2018-04-06T23:07:38.508597 #9104]  INFO -- default-centos-7:     @@ -41,7 +41,8 @@
+I, [2018-04-06T23:07:38.509572 #9104]  INFO -- default-centos-7:      wrapper.java.classpath.2=%ACTIVEMQ_HOME%/bin/activemq.jar
+I, [2018-04-06T23:07:38.509572 #9104]  INFO -- default-centos-7:      
+I, [2018-04-06T23:07:38.509572 #9104]  INFO -- default-centos-7:      # Java Library Path (location of Wrapper.DLL or libwrapper.so)
+I, [2018-04-06T23:07:38.509572 #9104]  INFO -- default-centos-7:     -wrapper.java.library.path.1=%ACTIVEMQ_HOME%/bin/linux-x86-64/
+I, [2018-04-06T23:07:38.509572 #9104]  INFO -- default-centos-7:     +# wrapper.java.library.path.1=%ACTIVEMQ_HOME%/bin/linux-x86-64/
+I, [2018-04-06T23:07:38.509572 #9104]  INFO -- default-centos-7:     +wrapper.java.library.path.1=%ACTIVEMQ_HOME%/bin/linux/
+I, [2018-04-06T23:07:38.509572 #9104]  INFO -- default-centos-7:      
+I, [2018-04-06T23:07:38.509572 #9104]  INFO -- default-centos-7:      # Java Additional Parameters
+I, [2018-04-06T23:07:38.509572 #9104]  INFO -- default-centos-7:      # note that n is the parameter number starting from 1.
+I, [2018-04-06T23:07:38.509572 #9104]  INFO -- default-centos-7:     @@ -56,7 +57,6 @@
+I, [2018-04-06T23:07:38.509572 #9104]  INFO -- default-centos-7:      wrapper.java.additional.9=-Djava.util.logging.config.file=logging.properties
+I, [2018-04-06T23:07:38.509572 #9104]  INFO -- default-centos-7:      wrapper.java.additional.10=-Dactivemq.conf=%ACTIVEMQ_CONF%
+I, [2018-04-06T23:07:38.509572 #9104]  INFO -- default-centos-7:      wrapper.java.additional.11=-Dactivemq.data=%ACTIVEMQ_DATA%
+I, [2018-04-06T23:07:38.510550 #9104]  INFO -- default-centos-7:     -wrapper.java.additional.12=-Djava.security.auth.login.config=%ACTIVEMQ_CONF%/login.config
+I, [2018-04-06T23:07:38.510550 #9104]  INFO -- default-centos-7:      
+I, [2018-04-06T23:07:38.510550 #9104]  INFO -- default-centos-7:      # Uncomment to enable jmx
+I, [2018-04-06T23:07:38.510550 #9104]  INFO -- default-centos-7:      #wrapper.java.additional.n=-Dcom.sun.management.jmxremote.port=1616
+I, [2018-04-06T23:07:38.510550 #9104]  INFO -- default-centos-7:     @@ -74,6 +74,7 @@
+I, [2018-04-06T23:07:38.510550 #9104]  INFO -- default-centos-7:      #wrapper.java.initmemory=3
+I, [2018-04-06T23:07:38.510550 #9104]  INFO -- default-centos-7:      
+I, [2018-04-06T23:07:38.510550 #9104]  INFO -- default-centos-7:      # Maximum Java Heap Size (in MB)
+I, [2018-04-06T23:07:38.510550 #9104]  INFO -- default-centos-7:     +# wrapper.java.maxmemory=1024
+I, [2018-04-06T23:07:38.510550 #9104]  INFO -- default-centos-7:      wrapper.java.maxmemory=1024
+I, [2018-04-06T23:07:38.510550 #9104]  INFO -- default-centos-7:      
+I, [2018-04-06T23:07:38.551624 #9104]  INFO -- default-centos-7:      # Application parameters.  Add parameters as needed starting from 1
+I, [2018-04-06T23:07:38.551624 #9104]  INFO -- default-centos-7:     - restore selinux security context
+I, [2018-04-06T23:07:43.055958 #9104]  INFO -- default-centos-7:   * service[activemq] action restart
+I, [2018-04-06T23:07:43.055958 #9104]  INFO -- default-centos-7:     - restart service service[activemq]
+I, [2018-04-06T23:07:43.259875 #9104]  INFO -- default-centos-7: 
+I, [2018-04-06T23:07:43.259875 #9104]  INFO -- default-centos-7: Running handlers:
+I, [2018-04-06T23:07:43.259875 #9104]  INFO -- default-centos-7: Running handlers complete
+I, [2018-04-06T23:07:43.259875 #9104]  INFO -- default-centos-7: Chef Client finished, 16/24 resources updated in 04 minutes 48 seconds
+I, [2018-04-06T23:07:43.606331 #9104]  INFO -- default-centos-7: Finished converging <default-centos-7> (5m2.86s).

@@ -1,0 +1,22 @@
+DEPENDENCIES
+  lib_bpsauths_activemq
+    path: ../lib_bpsauths_activemq
+  wra_activemq
+    path: .
+    metadata: true
+
+GRAPH
+  activemq (4.1.0)
+    java (~> 1.13)
+  apt (6.1.4)
+  homebrew (5.0.4)
+  java (1.50.0)
+    apt (>= 0.0.0)
+    homebrew (>= 0.0.0)
+    windows (>= 0.0.0)
+  lib_bpsauths_activemq (4.1.0)
+    java (~> 1.13)
+  windows (4.1.4)
+  wra_activemq (1.0.0)
+    activemq (>= 0.0.0)
+    java (>= 0.0.0)

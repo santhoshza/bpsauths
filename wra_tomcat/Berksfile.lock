@@ -1,0 +1,19 @@
+DEPENDENCIES
+  lib_bpsauths_tomcat
+    path: ../lib_bpsauths_tomcat
+  wra_tomcat
+    path: .
+    metadata: true
+
+GRAPH
+  apt (7.0.0)
+  homebrew (5.0.4)
+  java (1.50.0)
+    apt (>= 0.0.0)
+    homebrew (>= 0.0.0)
+    windows (>= 0.0.0)
+  lib_bpsauths_tomcat (3.0.0)
+  windows (4.1.4)
+  wra_tomcat (2.2.0)
+    java (>= 0.0.0)
+    lib_bpsauths_tomcat (>= 0.0.0)

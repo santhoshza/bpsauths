@@ -1,0 +1,9 @@
+source 'https://supermarket.chef.io'
+
+cookbook "lib_bpsauths_activemq", "> 0.0.0", path: "../lib_bpsauths_activemq"
+
+metadata
+
+#group :integration do
+#  cookbook 'test', path: 'test/cookbooks/test'
+#end
